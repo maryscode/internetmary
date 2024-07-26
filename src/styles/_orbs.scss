@@ -1,0 +1,104 @@
+
+#orb1 {
+    background: radial-gradient(rgb(252, 61, 169, .5), rgba(255,255,255, 0) 70%);
+    position: fixed;
+    width: 80vw;
+    height: 80vw;
+    left: -30%;
+    top: -80%;
+
+    animation: 4s orb1 linear infinite;
+}
+@keyframes orb1 {
+    0% {
+        transform: scale(.7) translate(0,0);
+    }
+    
+    20% {
+        transform: scale(1) translate(5%, 5%);
+    } 
+    40% {
+        transform: scale(1) translate(10%, 10%);
+    } 
+    60% {
+        transform: scale(1) translate(0, 0);
+    }     
+    80% {
+        transform:  scale(.8) translate(0, 0);
+    }          
+    100% {
+        transform: scale(.7) translate(0,0);        
+    }            
+}
+
+
+#orb2 {
+    background: radial-gradient( rgb(71, 186, 73, 1), rgba(255,255,255, 0) 70%);
+    width: 70vw;
+    height: 70vw;
+    position: fixed;
+    right: 50%;
+    top: -120%;
+    margin-right: -75vw;
+    animation: 10s orbcurve linear infinite;
+}
+@keyframes orbcurve {
+    0% {        
+        transform: scale(1) translate(0,0);
+    }
+    20% {
+        transform: scale(1.1) translate(15%,30%);
+    }  
+   
+    30% {
+        transform: scale(1.5) translate(10%,30%);
+    }      
+    80% {
+        transform: scale(1) translate(-10%, 10%);
+    }      
+          
+    100% {
+        
+        transform: scale(1) translate(0,0);
+   
+    }        
+}  
+
+#orb3 {
+    background: radial-gradient(rgba(255, 247, 0, 1), rgba(255, 255, 255, 0)70%);
+    width: 180vw;
+    height: 180vw;
+    position: fixed;
+    left: -80vw;
+    bottom: -140vw;
+    animation: 5s orbpulse linear infinite;
+}
+@keyframes orbpulse {
+    0% {
+        // transform: scale(.75) translate(0,0);
+        transform: scale(1);
+    }
+    10% {
+
+    }  
+    20% {
+        transform: scale(.8);
+    }
+    30% {
+    }      
+    40% {
+        transform: scale(1);
+    } 
+    50% {
+        transform: scale(1) translate(10%,5%);
+    }
+    60% {
+        transform: scale(1) translate(20%,10%);
+    }
+    70% {
+        transform: scale(1) translate(30%,10%);
+    }
+    100% {
+        transform: scale(1) translate(0,0);
+    }           
+}  

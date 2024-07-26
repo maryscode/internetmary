@@ -1,0 +1,81 @@
+#background {
+	//background: #000 linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+	opacity: 1;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+    z-index: 1;
+    transition: height .1s ease-out;
+}
+
+.gradient {
+    //background: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+    background: linear-gradient(40deg, rgba(254, 3, 104,.5) 0%, rgba(255,255,255,0) 40%, rgba(255,255,255,0) 50%, rgba(103, 3, 255,.5) 100%);
+    opacity: 1;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+    background-color: transparent;
+    transition: all 1s ease;
+
+}
+.gradient.placeholder {
+    opacity: 0;
+    height: 200px;
+    background: #000 linear-gradient(90deg, #5ee7df 0%, #b490ca 100%);
+}
+.gradient.interior {
+    opacity: 1;
+    background: #000 linear-gradient(90deg, #5ee7df 0%, #b490ca 100%);
+   
+    // background: #000 linear-gradient(90deg, #5ee7df 0%, #b490ca 100%);
+    height: 80px;
+
+}
+header {
+    z-index: 0;
+    #hello {
+        z-index: 1;
+    }
+}
+#cursor1 {
+    background: radial-gradient(rgb(162, 243, 250, .5), rgb(255, 255, 255, 0) 60%);
+    
+    position: absolute;
+    width: 100vh;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    transform: translate(-50vh, -50vh);
+    transition: all 1s ease-out;
+    &.topLeft {
+        background: radial-gradient(rgb(162, 243, 250, .5), rgb(255, 255, 255, 0) 60%);
+    }
+    &.topRight {
+        background: radial-gradient(rgb(173, 192, 255, .5), rgb(255, 255, 255, 0) 60%);
+    }
+    &.bottomLeft {
+        background: radial-gradient(rgb(255, 212, 252, .5), rgb(255, 255, 255, 0) 60%);
+    }        
+    &.bottomRight {
+        background: radial-gradient(rgb(190, 223, 247, .5), rgb(255, 255, 255, 0) 60%);
+    }  
+}
+#cursor2 {
+    background: radial-gradient(rgb(255, 250, 112, .5), rgb(255, 255, 255, 0) 50%);
+    position: absolute;
+    width: 150vh;
+    height: 150vh;
+    left: 0;
+    top: 0;
+    transform: translate(-25vh, -25vh);
+    transition: all 2s ease-out;
+}
