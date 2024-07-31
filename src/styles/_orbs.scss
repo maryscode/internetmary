@@ -40,7 +40,7 @@
     right: 50%;
     top: -120%;
     margin-right: -75vw;
-    animation: 10s orbcurve linear infinite;
+    animation: 5s orbcurve linear infinite;
 }
 @keyframes orbcurve {
     0% {        
@@ -71,7 +71,7 @@
     position: fixed;
     left: -80vw;
     bottom: -140vw;
-    animation: 5s orbpulse linear infinite;
+    animation: 6s orbpulse linear infinite;
 }
 @keyframes orbpulse {
     0% {

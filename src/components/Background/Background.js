@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-export default function Background({bgClass}) {
+export default function Background() {
 
   const blue = '#52D1DC',
         pink = '#D08FCB',
@@ -48,7 +48,7 @@ export default function Background({bgClass}) {
   return (
     <div 
       id="background" 
-      className={bgClass}
+      className="animateFadeIn"
       style={{
         background: dynamicBg, 
         transition: 'all 1s ease'

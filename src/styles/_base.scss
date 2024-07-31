@@ -1,5 +1,3 @@
-
-
 /************************
 	LAYOUT
 /************************/
@@ -13,7 +11,7 @@ body {
 	position: relative;
 	background: #fff;
 	//background: linear-gradient(to top, #5ee7df 0%, #b490ca 80%) fixed no-repeat;
-	color: #fff;
+	color: #4d4d4d;
 	word-wrap: break-word;
 	font-family: 'Montserrat', sans-serif;
 	text-align: center;
@@ -25,40 +23,18 @@ body {
   justify-content: center;
   min-height: 100%;
 }
+.App {
+	width: 100%;
+}
 #bg-div {
 	height: 100vh;
 	width: 100%;
-}
-#hello {
-	position: relative;
-	height: 100%;
-	padding: 0 40px;
-	.animate1 {
-		opacity:0;
-		animation: fadeIn 1.5s ease .5s 1 forwards;
-	}
-	.animate2 {
-		opacity:0;
-		animation: fadeIn .5s ease 1.5s 1 forwards;
-	}	
-	.animate3 {
-		opacity:0;
-		animation: fadeIn 1s ease 2s 1 forwards;
-	}		
-}
-@keyframes fadeIn {
-	0% {        
-		opacity:0;
-	}
-	100% {        
-		opacity: 1;
-	}		
 }
 
 /************************
 	TEXT
 /************************/
-h1, h2, h3 {font-weight: 400;}
+h1, h2  {font-weight: 400;}
 h1 {
 	font-size: 70px;
 	line-height: 55px;
@@ -67,99 +43,83 @@ h1 {
 	font-weight: 700;
 	text-transform: uppercase;
 }
-h1 a,
-h1 a span {
-	text-decoration: none;
-	color: #fff;
-	transition: all .7s;	
+h3 {
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 30px;
+	margin: 0;
+	color: #c3d102;
 }
- 
-h1 a:hover span {
-	color: #dcfd35;
+.text-center {
+	text-align: center !important;
 }
-
-h2 {
-  width: 100%;
-	font-size: 22px;
-	line-height: 20px;
-	color: #fff; 
-	margin: 0 0 5px;
-	text-transform: uppercase;
-	text-align: right;
+.summary {
+	font-size: 20px;
+	line-height: 30px;
+	text-align: center;
+	margin: 10px auto 0;
+	color: #b5b5b5;
+	font-weight: 600;
+	@media screen and (min-width: 1024px){
+		width: 55%;
+	}
 }
-
-
-p {
-    font-size: 18px;
-    line-height: 16px;
-    font-weight: 500;
-    margin: 30px 0;
-}
-a {
-	outline: none;
-	text-decoration: underline;
-	color: #aa87d8;
-  	transition: all .3s;
-}
-a:hover {color: #dcfd35;}
-
 /************************
 	BUTTONS
 /************************/
+button {
+	background: none;
+	padding: none;
+	border: none;
+	cursor: pointer;
+}
 .btn {
 	cursor: pointer;
 	margin: 10px 10px 0;
 	font-size: 14px;
 	display: block;
 	background: transparent;
-	border: 2px solid #fff;
+	border: 2px solid #dcfd35;
 	padding: 15px;
-	color: #fff;
+	color: #dcfd35;
 	width: 200px;
 	font-weight: 700;
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
+	transition: .2s all;
 }
 
-.btn:nth-of-type(1){ }
-// .btn:nth-of-type(1){ background: #DCFD35; border-color: #DCFD35; color: #000}
 .btn:hover {
-	color: #dcfd35;
-	border-color: #dcfd35;
-	// color: #000;
+	color: #fff;
+	border-color: #fff;
 }
 
 /************************
-	Tags
+	Container
 /************************/
-.tags {
-	margin: 40px auto 0;
-	width: 100%;
+.container {
+	padding: 20px;
+	max-width: 1500px;
+	margin: 0 auto;
+	@media screen and (min-width: 1024px){
+		padding: 40px;
+		
+	}
 }
-.tags span {
-	display: block;
-	float: left;
-	margin: 0 5px 5px 0;
-	padding: 5px 10px;
-	background: #fff;
-	font-size: 12px;
-	color: #333;
-	border-radius: 5px 5px 5px 5px;
-	-moz-border-radius: 5px 5px 5px 5px;
-	-webkit-border-radius: 5px 5px 5px 5px;
-	border: 0px solid #000000;
-	cursor: default;
-	white-space: nowrap;
-}
-.tags span:hover {
-	background: #d577ff;
-	color: #ffffff;
-	cursor: cell;
+.content {
+	max-width: 1000px;
+	margin: 50px auto;
+	// display: flex;
+
 }
 /************************
 	Helper classes
 /************************/
+.flex-end {
+	display: flex;
+	justify-content: flex-end;
+}
 .flex-center {
 	display: -ms-flexbox;
 	display: -webkit-flex;
@@ -179,35 +139,6 @@ a:hover {color: #dcfd35;}
 	-webkit-align-items: flex-start;
 	-ms-flex-align: start;
 	align-items: flex-start;
-}
-
-@media screen and (min-width: 768px) {
-	#hello {
-		padding: 0;
-		display: flex;
-		flex-direction: column;
-		flex-wrap: nowrap;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-	}
-	h1 {
-		margin: 0 0 0;
-		padding: 0;
-		width: auto;
-		font-size: 100px;
-		line-height: 71px;
-	}
-  h2 {
-		font-size: 34px;
-		line-height: 34px;
-		
-	}
-	// p {
-	// 	font-size: 18px;
-	// 	line-height: 18px;
-	// }
-	.tags {width: 500px;}
 }
 
 
