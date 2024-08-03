@@ -11,7 +11,7 @@ export default function Portfolio() {
     <div id={styles.portfolio}>        
         <div className="container">
           <h1 className="text-center animateSlideUp">Portfolio</h1>
-          <p  className="summary">With over 10 years of experience, I've built a lot of stuff. These projects just happen to be on my current laptop.</p>
+          <p  className="summary">With over 10 years of experience, I've built a lot of stuff. Here are a select few.</p>
         </div>
         <div id="activePortfolio" style={{scrollMarginTop: '50px'}}>
           {currentProject && <PortfolioFocus

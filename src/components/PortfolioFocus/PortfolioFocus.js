@@ -14,16 +14,18 @@ export default function PortfolioFocus({projectData}) {
           <div className={styles.feature}>
             
             <div className='container'>
-              <div className={styles.featureImgDesktop}>
+            <div className={` ${projectData.name === 'React Quiz' ? styles.featureImgTablet : styles.featureImgDesktop}`}>
                 <div className={styles.monitor}>
                   <div className={styles.loader}></div>
                   <img src={projectData.thumbSrc} />
                 </div>
               </div>
-              <div className={styles.featureImgMobile}>
-                <div className={styles.loader}></div>
-                <img src={projectData.mobileSrc} alt="" />
-              </div>
+              {projectData.name !== 'React Quiz' && (
+                <div className={styles.featureImgMobile}>
+                  <div className={styles.loader}></div>
+                  <img src={projectData.mobileSrc} alt="" />
+                </div>
+              )}
               <div className={styles.featureContent}>
                 <h2>{projectData.name}</h2>
                 <ul>

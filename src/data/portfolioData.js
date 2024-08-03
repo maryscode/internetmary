@@ -42,21 +42,21 @@ export const portfolioData = [
         "features":"Scroll animation",
         "challenges":"Flat PSD handed off. Animations and interactivity was left for me to design and code",
         "fun":"Free reign on all animation, scroll, and logo behavior",
-        "thumbSrc": require("../images/cleanbraille.png"),
+        "thumbSrc": require("../images/quiz-tablet.png"),
         "desktopSrc":"cleanbraille.png",
         "mobileSrc":"cleanbraille-mobile.png",
         "url":"https://reactquiz.staging-domain.com/"
     },
     {
         "name":"Rituals",
-        "summary":"A letter-tracing PDF worksheet generator",
+        "summary":"Programmed to release a new image weekly",
         "tech":"HTML, JS, SCSS, animation",
         "features":"Scroll animation",
         "challenges":"Flat PSD handed off. Animations and interactivity was left for me to design and code",
         "fun":"Free reign on all animation, scroll, and logo behavior",
-        "thumbSrc": require("../images/cleanbraille.png"),
-        "desktopSrc":"cleanbraille.png",
-        "mobileSrc":"cleanbraille-mobile.png",
+        "thumbSrc": require("../images/rituals-desktop.png"),
+        "desktopSrc": require("../images/rituals-desktop.png"),
+        "mobileSrc": require("../images/rituals-mobile.png"),
         "url":"https://gatsby-rituals-9swz58bkz-maryscodes-projects.vercel.app/unseen-rituals/"
     },
     {
@@ -66,9 +66,9 @@ export const portfolioData = [
         "features":"Scroll animation",
         "challenges":"Flat PSD handed off. Animations and interactivity was left for me to design and code",
         "fun":"Free reign on all animation, scroll, and logo behavior",
-        "thumbSrc": require("../images/cleanbraille.png"),
-        "desktopSrc":"cleanbraille.png",
-        "mobileSrc":"cleanbraille-mobile.png",
+        "thumbSrc": require("../images/rethink-desktop.png"),
+        "desktopSrc":require("../images/rethink-desktop.png"),
+        "mobileSrc":require("../images/rethink-mobile.png"),
         "url":"https://gatsby-animated-charts.vercel.app/"
     } 
 ]

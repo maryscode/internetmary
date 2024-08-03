@@ -1,21 +1,30 @@
 #hello {
 	position: relative;
-	height: 100%;
 	padding: 0 40px;
 	color: #fff;
 	z-index: 5;
 	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	min-height: 100%;
+	@media screen and (min-width: 1200px) {
+		padding: 0 40px;
+	}
 	.animate1,
 	.animate2 {
 		opacity:1;
 		animation: fadeIn 1s ease 1 forwards;
 	}
-	span:nth-of-type(1){
-		animation: slideRight 1s ease 1 forwards;
-	}
-	span:nth-of-type(2){
-		animation: slideLeft 1s ease 1 forwards;
-	}	
+	// span:nth-of-type(1){
+	// 	animation: 1s slideRight .5s 1 forwards;
+	// }
+	// span:nth-of-type(2){
+	// 	animation: 1s slideLeft .5s 1 forwards;
+	// }	
 	&.initialLoad {
 		.animate1 {
 			opacity:0;
@@ -27,48 +36,80 @@
 		}
 
 		h1 span:nth-child(1){
-			opacity:0;
-			transform: translateX(-40px);
-			animation: slideRight 1s ease 2s 1 forwards;
-		}
 
-		
+			opacity:0;
+			animation: fadeIn 1s ease 2s 1 forwards;
+		}
 		h1 span:nth-child(2){
 			opacity:0;
-			transform: translateX(40px);
-			animation: slideLeft 1s ease 2s 1 forwards;
+			animation: fadeIn 1s ease 2s 1 forwards;
 		}
-	
-
+	}
+	&.loaded {
+		span:nth-of-type(1){
+			animation: 1s slideRight .5s 1 forwards;
+		}
+		span:nth-of-type(2){
+			animation: 1s slideLeft .5s 1 forwards;
+		}
 	}
 	
 	h1 {
-		width: 650px;
-		height: 80px;
 		position: relative;
-		transition: 1s all;	
+		
 		cursor: pointer;
+		padding: 0;
+		font-size: 70px;
+		line-height: 60px;
 
+		@media screen and (min-width: 768px) {
+			position: absolute;
+			left: 50%;
+			margin-left: -325px;
+			top: 50%;
+			margin-top: -150px;
+			width: 650px;			
+			font-size: 100px;
+			line-height: 71px;				
+			height: 70px;
+		}
+		@media screen and (min-width: 1200px) {
+			transition: all 1s;
+		}
+		
 	}
 	h1 span {
-		position: absolute;
-		display: inline-block;
 		text-decoration: none;
 		color: #fff;
-		transition: 1s all;	
-		top: 0;
-		&:nth-of-type(1){
-			left: 0;
+		display: block;
+
+		@media screen and (min-width: 768px) {
+			display: inline-block;
+			position: absolute;
+			top: 0;
+			&:nth-of-type(1){
+				left: 0;
+			}
+			&:nth-of-type(2){
+				left: 340px;
+			}		
 		}
-		&:nth-of-type(2){
-			left: 340px;
+		@media screen and (min-width: 1200px) {
+			transition: all 1s;
 		}
 	}
+	h1:hover span {
+		color: #dcfd35;
+	}
 	p {
-		font-size: 18px;
-		line-height: 26px;
+		font-size: 14px;
+		line-height: 20px;
 		font-weight: 500;
 		margin: 30px 0;
+		@media screen and (min-width: 768px) {
+			font-size: 18px;
+			line-height: 26px;
+		}
 	}
 
 	.btn {
@@ -83,64 +124,93 @@
 
 .App.about {
 	#hello  {
-			// .animate1,
-	// .animate2,
-	// h1 span {
-	// 	opacity:1;
-	// 	animation: fadeIn 1s ease 1 forwards;
-	// }
+		// Have to change to display: block because content overflows
+		padding-top: 80px;
+		@media screen and (min-width: 1200px) {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			padding-top: 0;		
+		}
 		div.content {
-			position: absolute;
-			left: 50%;
-			margin-left: -200px;
-			top: -50%;
-			width: 500px;
 			text-align: left;
+			margin: 0;
+			padding: 40px 0 40px;
+			@media screen and (min-width: 768px) {
+				padding-top: 80px;
+			}
+			@media screen and (min-width: 1200px) {
+				width: 40%;
+				margin-left: 50%;
+			}
+
 		}
 		h1 {
-			width: 100%;
+			position: relative;
+			cursor: auto;
+			padding: 0;
+			font-size: 70px;
+			line-height: 60px;
+			margin: 0;
+			padding: 0;
+			left: auto;
+			top: auto;
+			width: auto;
+			height: auto;
+			
+			@media screen and (min-width: 1200px) {
+				position: absolute;
+				top: 50%;
+				left: 40px;
+				margin: 0 0 0;
+				padding: 0;
+				font-size: 100px;
+				line-height: 71px;				
+			}
 			span {
-				
+				position: relative;
+				left: auto;
+				top: auto;
+				margin: 0; 
+				// opacity: 0;
 			}
 			span:nth-of-type(1){
-				position: absolute;
-				left: 40px;
+				// animation: 1s slideRight .5s 1 forwards;
+				@media screen and (min-width: 1200px) {
+					position: absolute;
+					left: 40px;
+					top: 0;
+					top: -50px
+				}				
 			}
 			span:nth-of-type(2){
-				position: absolute;
-				left: 40px;
-				top: 100px;
-			}
+			//	animation: 1s slideLeft .5s 1 forwards;
+				@media screen and (min-width: 768px) {
+					margin-left: 20px;
+				}
+				@media screen and (min-width: 1200px) {
+					position: absolute;
+					left: 40px;
+					top: 40px;
+					margin-left: 0;
+				}
+			}				
+		}
+		h2 {
+			font-size: 30px;
+			line-height: normal;
 		}
 	}
+
 	.animate1,
 	.animate2 {
-		visibility: hidden;
+		display: none;
 	}
 }
 
 
 
-@media screen and (min-width: 768px) {
-	#hello {
-		padding: 0;
-		display: flex;
-		flex-direction: column;
-		flex-wrap: nowrap;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-	}
-	h1 {
-		margin: 0 0 0;
-		padding: 0;
-		width: auto;
-		font-size: 100px;
-		line-height: 71px;
-	}
-  h2 {
-		font-size: 34px;
-		line-height: 34px;		
-	}
-}
 

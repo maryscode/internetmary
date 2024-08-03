@@ -21,14 +21,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100%;
+  height: 100%;
 }
 .App {
 	width: 100%;
-}
-#bg-div {
-	height: 100vh;
-	width: 100%;
+	height: 100%;
 }
 
 /************************
@@ -50,18 +47,29 @@ h3 {
 	margin: 0;
 	color: #c3d102;
 }
+a, a:visited {
+	color: #dcfd35;
+	font-weight: bold;
+	transition: .2s all;
+}
+a:hover {
+	text-decoration: none;
+	color:#fff;
+}
 .text-center {
 	text-align: center !important;
 }
 .summary {
-	font-size: 20px;
-	line-height: 30px;
+	font-size: 16px;
+	line-height: 22px;
 	text-align: center;
 	margin: 10px auto 0;
 	color: #b5b5b5;
 	font-weight: 600;
 	@media screen and (min-width: 1024px){
 		width: 55%;
+		font-size: 20px;
+		line-height: 30px;
 	}
 }
 /************************
@@ -74,6 +82,7 @@ button {
 	cursor: pointer;
 }
 .btn {
+	box-sizing: border-box;
 	cursor: pointer;
 	margin: 10px 10px 0;
 	font-size: 14px;
@@ -102,6 +111,7 @@ button {
 	padding: 20px;
 	max-width: 1500px;
 	margin: 0 auto;
+	overflow: hidden;
 	@media screen and (min-width: 1024px){
 		padding: 40px;
 		
