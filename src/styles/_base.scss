@@ -103,6 +103,25 @@ button {
 	color: #fff;
 	border-color: #fff;
 }
+.toggleLink {
+	font-size: 18px;
+	letter-spacing: 1px;
+	font-weight: bold;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 0;
+	margin: 0;
+	img {
+		transition: .3s all;
+		display: inline-block;
+		width: auto;
+		height: 14px;
+		
+	}
+	&.less img {
+		transform: rotate(90deg);
+	}
+}
 
 /************************
 	Container
@@ -118,6 +137,7 @@ button {
 	}
 }
 .content {
+	width: 100%;
 	max-width: 1000px;
 	margin: 50px auto;
 	// display: flex;
@@ -126,6 +146,16 @@ button {
 /************************
 	Helper classes
 /************************/
+.mt-40 {
+	margin-top: 40px;
+}
+.ml-0 {
+	margin-left: 0 !important;
+}
+.flex-start {
+	display: flex;
+	justify-content: flex-start;
+}
 .flex-end {
 	display: flex;
 	justify-content: flex-end;

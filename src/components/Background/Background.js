@@ -1,13 +1,20 @@
 import React, { useState, useEffect } from 'react';
 export default function Background() {
-
-  const blue = '#52D1DC',
-        pink = '#D08FCB',
-        yellow = '#52b6ff',
-        purple = '#9d8bd9';
+  // const blue = '#52D1DC',
+  //       pink = '#D08FCB',
+  //       yellow = '#52b6ff',
+  //       purple = '#9d8bd9';
+  const bg1 = '#52D1DC', // blue
+        bg2 = '#8f91ff', //#8f91ff', // purple
+        bg3 = '#db4fcb', // pink
+        bg4 = '#00c8ff'; // greenish
+    //  const bg1 = '#52D1DC', // teal  - like
+    //     bg2 = '#D08FCB', // pink - ok
+    //     bg3 = '#52b6ff', // blue -- dont like
+    //     bg4 = '#9d8bd9';  //purple - like
 
   const [mousePos, setMousePos] = useState({x: 0, y: 0});
-  const [dynamicBg, setDynamicBg] = useState(blue);
+  const [dynamicBg, setDynamicBg] = useState(bg1);
   const [cursorClass, setCursorClass] = useState('topLeft');
     
   useEffect(() => {
@@ -16,24 +23,23 @@ export default function Background() {
         x: event.clientX,
         y: event.clientY
       });
-      console.log('mousemove')
+      // console.log('mousemove')
       if (event.clientY < event.view.innerHeight/2 && event.clientX < event.view.innerWidth/2 ) {
         // top left
-        setDynamicBg(yellow);
-        setCursorClass('bottomRight');        
-        
+        setDynamicBg(bg1);
+        setCursorClass('topLeft');        
       } else if (event.clientY < event.view.innerHeight/2 && event.clientX >= event.view.innerWidth/2){ 
         // top right 
         setCursorClass('topRight');
-        setDynamicBg(purple);
+        setDynamicBg(bg2);
       } else if (event.clientY >= event.view.innerHeight/2 && event.clientX < event.view.innerWidth/2 ){
         // bottom left
-        setDynamicBg(pink);
+        setDynamicBg(bg3);
         setCursorClass('bottomLeft');
       } else {
-          // bottom right
-          setDynamicBg(blue);
-          setCursorClass('topLeft');
+          // Bottom Right
+          setDynamicBg(bg4);
+          setCursorClass('bottomRight');
       }  
     };
 

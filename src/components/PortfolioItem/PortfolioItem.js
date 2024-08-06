@@ -8,7 +8,7 @@ export default function PortfolioItem({projectData,onProjectClick}){
         focus.scrollIntoView({behavior: "smooth" });
     }    
     return(
-        <div onClick={handleOnClick} className={styles.portfolioItem}>
+        <div onClick={handleOnClick} className={`${styles.portfolioItem} animateFadeInDelay`}>
             <div className={styles.thumbnail} style={{backgroundImage: 'url('+ projectData.thumbSrc +')'}}>
                 <div className={styles.cta}><span>View Project Details</span></div>
             </div>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Nav.module.scss';
 import Menu from '../Menu/Menu.js';
-export default function Nav({currentScreen, onMenuClick}) {
+export default function Nav({currentScreen, onMenuClick, setInitialLoad}) {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -9,6 +9,7 @@ export default function Nav({currentScreen, onMenuClick}) {
         window.scrollTo({ top: 0});
         onMenuClick(e);
         setIsOpen(false);
+        
     }
     const handleToggle = (e) => {
         
@@ -33,7 +34,7 @@ export default function Nav({currentScreen, onMenuClick}) {
                 <span></span>
             </button>
             <div className={`${styles.navMenu} ${isOpen ? styles.showMenu : ''}`}>
-                <Menu menuClass={styles.footerMenu} currentScreen={currentScreen} onMenuClick={onMenuClick} setIsOpen={setIsOpen} />
+                <Menu setInitialLoad={setInitialLoad} currentScreen={currentScreen} onMenuClick={onMenuClick} setIsOpen={setIsOpen} />
             </div> 
         </div>
     )

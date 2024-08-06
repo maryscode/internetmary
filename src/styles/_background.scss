@@ -10,7 +10,7 @@
     transition: height .1s ease-out;
 }
 .gradient {
-    background: linear-gradient(40deg, rgba(254, 3, 104,.5) 0%, rgba(255,255,255,0) 40%, rgba(255,255,255,0) 50%, rgba(103, 3, 255,.5) 100%);
+    background: linear-gradient(40deg, rgba(255, 213, 0,.5) 0%, rgba(255,255,255,0) 40%, rgba(255,255,255,0) 50%, rgba(103, 3, 255,.8) 100%);
     opacity: 1;
 	position: fixed;
 	top: 0;
@@ -27,8 +27,7 @@ header {
     }
 }
 #cursor1 {
-    background: radial-gradient(rgb(162, 243, 250, .5), rgb(255, 255, 255, 0) 60%);
-    
+    background: radial-gradient(rgb(173, 192, 255, .5), rgb(255, 255, 255, 0) 60%); // light cornblue
     position: absolute;
     width: 100vh;
     height: 100vh;
@@ -36,21 +35,21 @@ header {
     top: 0;
     transform: translate(-50vh, -50vh);
     transition: all 1s ease-out;
-    &.topLeft {
-        background: radial-gradient(rgb(162, 243, 250, .5), rgb(255, 255, 255, 0) 60%);
+    &.bottomRight {
+        background: radial-gradient(rgb(177, 223, 252, .3), rgb(255, 255, 255, 0) 60%); // light blue
     }
     &.topRight {
-        background: radial-gradient(rgb(173, 192, 255, .5), rgb(255, 255, 255, 0) 60%);
+        background: radial-gradient(rgb(223, 212, 255, .3), rgb(255, 255, 255, 0) 60%); // light cornblue
     }
     &.bottomLeft {
-        background: radial-gradient(rgb(255, 212, 252, .5), rgb(255, 255, 255, 0) 60%);
+        background: radial-gradient(rgb(255, 254, 217,.3), rgb(255, 255, 255, 0) 60%); //light pink
     }        
-    &.bottomRight {
-        background: radial-gradient(rgb(190, 223, 247, .5), rgb(255, 255, 255, 0) 60%);
+    &.topLeft {
+        background: radial-gradient(rgb(190, 223, 247, .3), rgb(255, 255, 255, 0) 60%); // light blue again
     }  
 }
 #cursor2 {
-    background: radial-gradient(rgb(255, 250, 112, .5), rgb(255, 255, 255, 0) 50%);
+    background: radial-gradient(rgb(255, 250, 112, .4), rgb(255, 255, 255, 0) 50%);
     position: absolute;
     width: 150vh;
     height: 150vh;

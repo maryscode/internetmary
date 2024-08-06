@@ -181,7 +181,6 @@
     }       
 }
 .navMenu {
-    ul { list-style: none;}
     @media screen and (max-width: 767px) {
         position: fixed;
         top: 50px;
@@ -203,6 +202,13 @@
         font-weight: bold;
         text-transform: uppercase;
     }
+    ul { 
+        list-style: none;
+		@media screen and (min-width: 768px) {
+            display: flex;
+            justify-content: center;
+        }
+    }    
     li {
         padding: 20px 10px;
         display: block;
@@ -227,6 +233,12 @@
                 width: 100%;
                 background: #fff;
                 transition: 1s ease .5s;
+            }
+        }
+        &:last-child {
+            overflow: visible;
+            &:after {
+                visibility: hidden;
             }
         }
         a,

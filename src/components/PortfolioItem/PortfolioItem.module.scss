@@ -9,6 +9,8 @@
     color: #4d4d4d;
     transition: all .2s;
     cursor: pointer;
+
+    
     * {
         transition: all .2s;
     }
@@ -51,6 +53,7 @@
     background: #eee;
     background-size: auto 100%;
     background-repeat: no-repeat;
+    background-position: center;
     border: 4px solid #eee;
     @media screen and (min-width: 450px) {
         background-size: 100% auto;
@@ -91,3 +94,21 @@
         transform: translateY(0);
     }
 }
+@keyframes fadeIn {
+	0% {       
+        transform: translateY(20px); 
+		opacity:0;
+	}
+	100% {        
+        transform: translateY(0);
+		opacity: 1;
+	}		
+}	
+
+@for $i from 1 through 10 {
+    .portfolioItem:nth-child(#{$i}) {
+      opacity:0;  
+      animation:fadeIn .8s ease .75s 1 forwards;
+      animation-delay: .3s * $i;
+    }
+  }

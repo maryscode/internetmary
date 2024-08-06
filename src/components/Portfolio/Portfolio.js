@@ -19,13 +19,14 @@ export default function Portfolio() {
           />}
         </div>
         <div className="container">                  
-          {currentProject && <h3 className='text-center'>Explore Selected Works</h3>}
+          {currentProject && <h3 className='text-center'>Explore Recent Work</h3>}
           <div className={styles.portfolioIndex}>   
 
-            {portfolioData.map(project => {
+            {portfolioData.map((project,i) => {
               return (
                 
                 <PortfolioItem
+                  key={i}
                   projectData={project}
                   onProjectClick={setCurrentProject}
                 />                

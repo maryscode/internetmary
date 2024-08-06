@@ -35,21 +35,29 @@
 			animation: fadeIn 1s ease 2s 1 forwards;
 		}
 
-		h1 span:nth-child(1){
+		// h1 span:nth-child(1){
 
+		// 	opacity:0;
+		// 	animation: fadeIn 1s ease 2s 1 forwards;
+		// }
+		// h1 span:nth-child(2){
+		// 	opacity:0;
+		// 	animation: fadeIn 1s ease 2s 1 forwards;
+		// }
+		h1 > span:nth-of-type(1){
 			opacity:0;
-			animation: fadeIn 1s ease 2s 1 forwards;
+			animation: 1.5s slideDown 2s 1 forwards;
 		}
-		h1 span:nth-child(2){
+		h1 > span:nth-of-type(2){
 			opacity:0;
-			animation: fadeIn 1s ease 2s 1 forwards;
-		}
+			animation: 1.5s slideDown 2.3s 1 forwards;
+		}		
 	}
 	&.loaded {
-		span:nth-of-type(1){
+		h1 > span:nth-of-type(1){
 			animation: 1s slideRight .5s 1 forwards;
 		}
-		span:nth-of-type(2){
+		h1 > span:nth-of-type(2){
 			animation: 1s slideLeft .5s 1 forwards;
 		}
 	}
@@ -78,7 +86,7 @@
 		}
 		
 	}
-	h1 span {
+	h1 > span {
 		text-decoration: none;
 		color: #fff;
 		display: block;
@@ -170,14 +178,14 @@
 				font-size: 100px;
 				line-height: 71px;				
 			}
-			span {
+			& > span {
 				position: relative;
 				left: auto;
 				top: auto;
 				margin: 0; 
 				// opacity: 0;
 			}
-			span:nth-of-type(1){
+			& > span:nth-of-type(1){
 				// animation: 1s slideRight .5s 1 forwards;
 				@media screen and (min-width: 1200px) {
 					position: absolute;
@@ -186,7 +194,7 @@
 					top: -50px
 				}				
 			}
-			span:nth-of-type(2){
+			& > span:nth-of-type(2){
 			//	animation: 1s slideLeft .5s 1 forwards;
 				@media screen and (min-width: 768px) {
 					margin-left: 20px;
@@ -203,6 +211,22 @@
 			font-size: 30px;
 			line-height: normal;
 		}
+		h3 {
+			color: #fff;
+			margin: 40px 0 10px;
+			font-size: 18px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+		p {
+			margin-top: 0;
+		}
+		.sm-txt {
+			p {
+				font-size: 15px;
+				line-height: 22px;
+			}
+		}		
 	}
 
 	.animate1,
@@ -214,3 +238,12 @@
 
 
 
+// @for $i from 1 through 4 {
+//    h1 > span span:nth-child(#{$i}) {
+// 	position: relative;
+//       opacity:0;  
+// 	  transform: translateY(-20px);
+//       animation: fadeDown 1s ease .75s 1 forwards;
+//       animation-delay: .4s * $i;
+//     }
+//   }

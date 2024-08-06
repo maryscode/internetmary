@@ -6,7 +6,6 @@ import resume from '../../downloads/MaryChan_FrontEnd_Resume.pdf';
 export default function Footer({currentScreen, onMenuClick}) {
 
     const saveMsg = 'Click to copy email address';
-
     const [showToolTip, setShowToolTip] = useState(false);
     const [toolTipMsg, setToolTipMsg] = useState(saveMsg);
   
@@ -26,7 +25,7 @@ export default function Footer({currentScreen, onMenuClick}) {
       
       
     const handleEmail = () => {
-        navigator.clipboard.writeText('maryschan@gmail.com').then(() => {
+        navigator?.clipboard && navigator.clipboard.writeText('maryschan@gmail.com').then(() => {
             setShowToolTip(true);
             setToolTipMsg('Saved to clipboard!')
           }).catch((err) => {
@@ -40,7 +39,7 @@ export default function Footer({currentScreen, onMenuClick}) {
             <ul className={`${styles.menu} ${styles.footerMenu}`}>
                 <li className={currentScreen === 'resume' ? styles.active : ''}><a href={resume} target='_blank' rel="noreferrer">Resume</a></li>
                 <li>
-                <a href="mailto:maryschan@gmail.com" onClick={handleEmail}>
+                <a href="mailto:&#109;&#97;&#114;&#121;&#115;&#99;&#104;&#97;&#110;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;" onClick={handleEmail}>
                     Contact Mary
                 </a>
                 <span className={`${showToolTip ? styles.show : ''}`}>{toolTipMsg}</span>
