@@ -28,9 +28,10 @@ export default function PortfolioFocus({projectData}) {
               )}
               <div className={styles.featureContent}>
                 <h2>{projectData.name}</h2>
+                <p>{projectData.summary}</p>
                 <ul>
                   <li><strong>Technology:</strong> {projectData.tech}</li>
-                  <li><strong>Goals and Objectives:</strong> {projectData.summary}</li>
+                  {/* <li><strong>Goals and Objectives:</strong> </li> */}
                   <li><strong>Key Features:</strong>  {projectData.features}</li>
                   <li><strong>Challenges:</strong> {projectData.challenges}</li>
                   <li><strong>What was fun about this project: </strong> {projectData.fun}</li>

@@ -38,7 +38,7 @@ export const portfolioData = [
         "tech":"React, SCSS, animations",
         "features":"Multiple choice, boolean, a timer that stops the quiz, a form, and a summary of all responses with the correct answers highlighted.",
         "challenges":"This was my first React app, and it involved many complex features.",
-        "fun":"This was a tough first React app to built but very satisfying when I completed it.",
+        "fun":"This was a tough first React app to build but very satisfying when I completed it.",
         "thumbSrc": require("../images/quiz-tablet.png"),
         "ipad": true,
         "url":"https://reactquiz.staging-domain.com/"

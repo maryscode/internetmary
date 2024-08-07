@@ -53,7 +53,12 @@
             font-size: 40px;
             color: #fff;
             padding-left: 0x;
-            margin: 0 0 40px;
+            margin: 0 0 5px;
+        }
+        p {
+            color: #fff;
+            margin: 0 0 30px; 
+            font-weight: bold;
         }
     }
     .featureImgTablet + .featureContent {
@@ -64,7 +69,11 @@
     }
     ul {
         padding: 0;
-        li {color: #fff}
+        li {
+            color: #fff; 
+            line-height: 22px;
+            margin-bottom: 20px;
+        }
     }
     .loader {
         border: 7px solid #d0b0ff;
