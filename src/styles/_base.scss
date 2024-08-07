@@ -104,18 +104,19 @@ button {
 	border-color: #fff;
 }
 .toggleLink {
-	font-size: 18px;
+	font-size: 13px;
 	letter-spacing: 1px;
 	font-weight: bold;
 	color: #fff;
 	text-transform: uppercase;
 	padding: 0;
 	margin: 0;
+	text-align: right;
 	img {
 		transition: .3s all;
 		display: inline-block;
 		width: auto;
-		height: 14px;
+		height: 10px;
 		
 	}
 	&.less img {

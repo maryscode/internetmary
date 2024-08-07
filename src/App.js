@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './styles/styles.scss';
 import Background from  './components/Background/Background.js';
 import Nav from  './components/Nav/Nav.js';
@@ -30,7 +30,7 @@ function App() {
       <Nav currentScreen={currentScreen} onMenuClick={setCurrentScreen} setInitialLoad={setInitialLoad} />
       
       {currentScreen !== 'portfolio' && (
-        <Background bgClass={'home'} />  
+        <Background bgClass={'home'} currentScreen={currentScreen} />  
       )}
         
         {currentScreen !== 'portfolio' && (
@@ -38,10 +38,7 @@ function App() {
             
             <h1 onClick={(e) => {handleNavClick('about')}}>
                   <span>
-                    <span>M</span>
-                    <span>a</span>
-                    <span>r</span>
-                    <span>y</span>
+                    Mary
                   </span> 
                   <span>Chan</span>
             </h1>
@@ -54,30 +51,31 @@ function App() {
             {currentScreen === 'about' && (             
               <div className="content animateFadeInDelay">
                 <h2>Hello, I'm Mary.</h2>
-                
+                <p>I'm a front-end developer. I love exploring the creative aspect of programming and bringing ideas to life. I excel when confronted with challenges that demand inventive and resourceful solutions. My mottos are: "Figure it out" and, often at the expense of sleep, "It can be better."</p>
+                <p>Having spent over a decade in the industry, I continually learn new technologies and have to discern lasting innovations from passing trends. Above all, I believe in having a strong foundation in the fundamentals of HTML5, CSS, and JavaScript&mdash;everything else is a flavor of libraries and tools for different use cases.</p>
+                <p>A perfectionist at heart, I work tirelessly to stay true to the design and ensure that the user experience is effortless and accessible. My primary goal is to create a pleasant and engaging digital interaction.</p>
 
+                <p>When I'm not coding, I can be found <a href="https://stringsmagazine.com/a-bow-of-humility-setting-aside-my-pride-helped-embrace-my-childlike-enthusiasm-for-music/" target='_blank' rel="noreferrer">playing the violin</a> with my chamber ensemble, going on a run,  deep-diving into a curiosity on YouTube and Wiki, or eating a pizza.</p>
 
-                <p>I'm a meticulous and resourceful front-end developer based in SF, passionate about exploring the creative side of programming and bringing ideas to life. My mottos are: "Figure it out" and, often at the expense of sleep, "It can be better."</p>
-                <p>With a decade of experience across diverse projects, I excel under pressure, adapt well to team dynamics, and continuously learn new technologies, often discerning lasting innovations from passing trends. I believe in a strong foundation in the fundamentals of HTML5, CSS, and JavaScript—I see everything else as a flavor of libraries and tools for different use cases. A perfectionist at heart, I work tirelessly to stay true to the design and ensure that the user experience is effortless and accessible. My primary goal is to create a pleasant, engaging, and seamless user experience.
-
-                </p>
-
-                <p>When I'm not coding, I can be found <a href="https://stringsmagazine.com/a-bow-of-humility-setting-aside-my-pride-helped-embrace-my-childlike-enthusiasm-for-music/" target='_blank'>playing the violin</a> with my chamber ensemble, going on a run,  deep-diving into a curiosity on YouTube and Wiki, or eating a pizza.</p>
-
-              <p><button className={`toggleLink ${showMore ? 'less' : 'more'}`} onClick={handleClickMore}>
+              <p className='flex-end'><button className={`toggleLink ${showMore ? 'less' : 'more'}`} onClick={handleClickMore}>
                 {showMore ? 'Less on my background' : 'More on my background'} <img src={chevron} />
               </button></p>
             
             {showMore && (
-              <div className="">
-                <h3>My Journey</h3>
-                <p>Coding started off as a hobby back when websites were made with tables and internet connection would get interrupted with a phone call. As a kid, I built a website to show off my cartoon drawings. As a teenager, I coded websites to support my outlet for creative writing—only to discover later that my true creative drive came from coding itself. With the help of online tutorials and strict parents who kept me home with nothing else to do, I honed my skills and embraced the motto: "Figure it out." 
-
+              <div className="sm-txt">
+                <h3>My Coding Journey</h3>
+                <p>Coding started off as a hobby back when websites were made with tables and internet connection would get interrupted with a phone call. I saw building websites as a means to an end. As a kid, I built a website to exhibit my cartoon drawings. As a teenager, I customized blogs to showcase my creative writing. With the help of online tutorials and strict parents who kept me home with nothing else to do, I honed my coding skills and embraced the motto: "Figure it out." </p>
+                  
+                <p>I blogged and built out my website religoiusly, gaining a fan base at an early age. But was it the writing I loved, or was the real joy in coding the platform that allowed me to write? At the time, with so few female developers, identifying as a programmer or majoring in computer science felt out of reach, so I assumed it must be the writing I loved and pursued an English major. However, in every job I took and organization I joined, I somehow would end up behind a computer, working on their website. It eventually became clear that my true creative passion was in the coding itself. I didn't need to question if I could be a developer anymore&mdash;I was <em>already</em> a developer.</p>
+                
+                <p>My first official position as a programmer began in 2008 at a digital consultancy in Palo Alto.
+                   Since then, I've tackled a diverse array of projects and explored different team and company sizes. I've been an individual contributer at a corporation, a one-person agency handling every aspect of development and administration. I've hit the ground running with scrappy, shoot-from-the-hip start-ups. No matter the environment, once I start coding, my goals are always the same: make sure it looks good, works on every major browser, and write code in such a way so that my future self won't hate me (i.e. organized, self-evident, and scalable).
                 </p>
-                <p>My career in programming started in 2008 at a digital consultancy in Palo Alto. Since then, I've tackled a diverse array of projects, from coding apps and websites to setting up build tools and templates for junior developers. I've explored working with corporate teams to build large-scale projects, independently designing and developing websites as my own agency, and hitting the ground running with scrappy, shoot-from-the-hip start-ups. It didn't matter under what environment, once I started coding, my goals were always the same: make sure it looks good, works on every major browser, and write code in such a way so that my future self won't hate me (i.e. organized, self-evident, and scalable).
-                </p>
 
-                <p>I am truly excited for the future of technology and optimistic about the fresh ideas of the generations to come. </p>
+                <p>Today, I am seeking to work with forward-thinking designers and meticulous engineers to build a world class product that will positively impact culture and enhance lifestyle. I care about the work I do and the people I work with&mdash;I want to refine both the user experience and the development workflow.</p>
+                  
+                  <p>I am excited for the future of technology and optimistic about the fresh ideas of the generations to come.</p>
+                
 
                   <h3>Website Details</h3>
                   <p>This site was proudly developed in a few days with React and SCSS. The designed is based on my aura portrait. </p>
@@ -88,7 +86,7 @@ function App() {
 
                 <div className="flex-start mt-40 ml-0">
                   <button className="btn ml-0" onClick={(e) => {handleNavClick('portfolio')}} >Portfolio</button>
-                  <a className="btn" target="_blank" href="https://www.linkedin.com/in/chanmary">LinkedIn</a>
+                  <a className="btn" target="_blank" href="https://www.linkedin.com/in/chanmary" rel="noreferrer">LinkedIn</a>
                 </div>                
                 
               </div>

@@ -32,11 +32,11 @@
 
 
 #orb2 {
-    background: linear-gradient(to left, rgb(53, 24, 115, 1), rgba(255,255,255, 0) 70%);
+    background: radial-gradient( rgb(53, 24, 115, .2), rgba(255,255,255, 0) 70%);
     width: 120vw;
     height: 120vw;
     position: fixed;
-    top: -30vw;
+    top: 0vw;
     left: 30vw;
     //animation: 8s orbcurve linear infinite;
 }

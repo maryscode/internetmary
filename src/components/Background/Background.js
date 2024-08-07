@@ -1,17 +1,9 @@
 import React, { useState, useEffect } from 'react';
-export default function Background() {
-  // const blue = '#52D1DC',
-  //       pink = '#D08FCB',
-  //       yellow = '#52b6ff',
-  //       purple = '#9d8bd9';
+export default function Background({currentScreen}) {
   const bg1 = '#52D1DC', // blue
         bg2 = '#8f91ff', //#8f91ff', // purple
         bg3 = '#db4fcb', // pink
         bg4 = '#00c8ff'; // greenish
-    //  const bg1 = '#52D1DC', // teal  - like
-    //     bg2 = '#D08FCB', // pink - ok
-    //     bg3 = '#52b6ff', // blue -- dont like
-    //     bg4 = '#9d8bd9';  //purple - like
 
   const [mousePos, setMousePos] = useState({x: 0, y: 0});
   const [dynamicBg, setDynamicBg] = useState(bg1);
@@ -61,15 +53,20 @@ export default function Background() {
       }}
     >
         <div className="gradient" />
-        <div 
-            id="cursor2" 
-            style={{ left: mousePos.x, top: mousePos.y}}
-        ></div>            
-        <div 
-            id="cursor1" 
-            className={cursorClass}
-            style={{ left: mousePos.x, top: mousePos.y}}
-        ></div>      
+        {currentScreen === 'home' && (
+          <>
+            <div 
+              id="cursor2" 
+              style={{ left: mousePos.x, top: mousePos.y}}
+          ></div>            
+          <div 
+              id="cursor1" 
+              className={cursorClass}
+              style={{ left: mousePos.x, top: mousePos.y}}
+          ></div>     
+           </>
+        )}
+         
         <div id="orb2" />
         <div id="orb1" />
         <div id="orb3" />

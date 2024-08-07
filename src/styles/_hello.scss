@@ -19,12 +19,6 @@
 		opacity:1;
 		animation: fadeIn 1s ease 1 forwards;
 	}
-	// span:nth-of-type(1){
-	// 	animation: 1s slideRight .5s 1 forwards;
-	// }
-	// span:nth-of-type(2){
-	// 	animation: 1s slideLeft .5s 1 forwards;
-	// }	
 	&.initialLoad {
 		.animate1 {
 			opacity:0;
@@ -34,16 +28,6 @@
 			opacity:0;
 			animation: fadeIn 1s ease 2s 1 forwards;
 		}
-
-		// h1 span:nth-child(1){
-
-		// 	opacity:0;
-		// 	animation: fadeIn 1s ease 2s 1 forwards;
-		// }
-		// h1 span:nth-child(2){
-		// 	opacity:0;
-		// 	animation: fadeIn 1s ease 2s 1 forwards;
-		// }
 		h1 > span:nth-of-type(1){
 			opacity:0;
 			animation: 1.5s slideDown 2s 1 forwards;
@@ -71,15 +55,16 @@
 		line-height: 60px;
 
 		@media screen and (min-width: 768px) {
-			position: absolute;
-			left: 50%;
-			margin-left: -325px;
-			top: 50%;
-			margin-top: -150px;
-			width: 650px;			
+			// position: fixed;
+			// position: absolute;
+			// left: 50%;
+			// margin-left: -325px;
+			// top: 50%;
+			// margin-top: -150px;
+			// width: 650px;			
 			font-size: 100px;
 			line-height: 71px;				
-			height: 70px;
+			// height: 70px;
 		}
 		@media screen and (min-width: 1200px) {
 			transition: all 1s;
@@ -93,13 +78,19 @@
 
 		@media screen and (min-width: 768px) {
 			display: inline-block;
-			position: absolute;
-			top: 0;
+			position: fixed;
+			// top: 0;
+			bottom: 50%;
+			margin-bottom: 80px;
+			left: 50%;
 			&:nth-of-type(1){
-				left: 0;
+				// left: 0;
+				margin-left: -320px;
+				
 			}
 			&:nth-of-type(2){
-				left: 340px;
+				// left: 340px;
+				margin-left: 20px;
 			}		
 		}
 		@media screen and (min-width: 1200px) {
@@ -170,9 +161,9 @@
 			height: auto;
 			
 			@media screen and (min-width: 1200px) {
-				position: absolute;
-				top: 50%;
-				left: 40px;
+				// position: absolute;
+				// top: 50%;
+				// left: 40px;
 				margin: 0 0 0;
 				padding: 0;
 				font-size: 100px;
@@ -188,10 +179,13 @@
 			& > span:nth-of-type(1){
 				// animation: 1s slideRight .5s 1 forwards;
 				@media screen and (min-width: 1200px) {
-					position: absolute;
+					// position: absolute;
+					// left: 40px;
+					// top: -50px
+					position: fixed;
 					left: 40px;
-					top: 0;
-					top: -50px
+					bottom: 130px;
+					margin: 0;					
 				}				
 			}
 			& > span:nth-of-type(2){
@@ -200,10 +194,14 @@
 					margin-left: 20px;
 				}
 				@media screen and (min-width: 1200px) {
-					position: absolute;
+					// position: absolute;
+					// left: 40px;
+					// top: 40px;
+					// margin-left: 0;
+					position: fixed;
 					left: 40px;
-					top: 40px;
-					margin-left: 0;
+					bottom: 40px;
+					margin: 0;				
 				}
 			}				
 		}
@@ -222,9 +220,14 @@
 			margin-top: 0;
 		}
 		.sm-txt {
+			padding: 20px;
+			background: rgba(0,0,0,.3);
+			border-radius: 20px;
+			opacity: 0;
+			animation: fadeDown 1s ease 1 forwards;
 			p {
-				font-size: 15px;
-				line-height: 22px;
+				font-size: 16px;
+				line-height: 24px;
 			}
 		}		
 	}
