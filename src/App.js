@@ -58,7 +58,7 @@ function App() {
 
                 <p>Over a decade in the industry has honed my ability to quickly learn and adapt to new technologies. Above all, I believe in having a strong foundation in the fundamentals of HTML5, CSS, and JavaScript&mdash;I see everything else is a flavor of libraries and tools for different use cases.</p>
 
-                <p>Today, I'm seeking to collaborate with forward-thinking designers and meticulous engineers to apply my front-end expertise in building a world-class product that will positively impact culture. </p>
+                <p>Today, I'm seeking to focus my front-end skills on collaborating with forward-thinking designers and meticulous engineers to build a world-class product that will positively impact culture. </p>
 
                 <p>When I'm not coding, I can be found <a href="https://stringsmagazine.com/a-bow-of-humility-setting-aside-my-pride-helped-embrace-my-childlike-enthusiasm-for-music/" target='_blank' rel="noreferrer">playing the violin</a> with my chamber ensemble, going on a run,  deep-diving into a curiosity on YouTube and Wiki, or eating a pizza.</p>
 
