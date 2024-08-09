@@ -4,13 +4,13 @@ import Background from  './components/Background/Background.js';
 import Nav from  './components/Nav/Nav.js';
 import Footer from  './components/Footer/Footer.js';
 import Portfolio from  './components/Portfolio/Portfolio.js';
-import chevron from  './images/chevron.svg';
+// import chevron from  './images/chevron.svg';
 
 function App() {
 
   const [currentScreen, setCurrentScreen] = useState('home');
   const [initialLoad, setInitialLoad] = useState(true);
-  const [showMore, setShowMore] = useState(false);
+ //const [showMore, setShowMore] = useState(false);
   
 
   const handleNavClick = (e) => {
@@ -21,9 +21,9 @@ function App() {
     setCurrentScreen(e);
   }
 
-  const handleClickMore = () => {
-    setShowMore(!showMore);
-  }
+  // const handleClickMore = () => {
+  //   setShowMore(!showMore);
+  // }
 
   return (
     <div className={`App ${currentScreen}`}>
@@ -37,9 +37,7 @@ function App() {
           <div id="hello" className={initialLoad ? 'initialLoad' : 'loaded'}>
             
             <h1 onClick={(e) => {handleNavClick('about')}}>
-                  <span>
-                    Mary
-                  </span> 
+                  <span>Mary</span> 
                   <span>Chan</span>
             </h1>
             <p className="animate1">Creative and user-focused full-stack developer. 10+ years of experience. </p>
@@ -71,7 +69,7 @@ function App() {
                 <h3>My Coding Journey</h3>
                 <p>Coding started off as a hobby back when websites were made with tables. I saw building websites as a means to an end. As a kid, I built a website to exhibit my cartoon drawings. As a teenager, I customized blogs to showcase my creative writing. With the help of online tutorials (and strict parents who kept me home with nothing else to do), I honed my coding skills and kept going.</p>
                   
-                <p>I blogged and built out my website religoiusly, gaining a fan base at an early age. But I didn't quite understand if it was the writing I loved, or if the actual fun came from buliding the platform that allowed me to write. At the time, with so few female developers, identifying as a programmer or majoring in computer science felt unrealistic and out of reach. I assumed it was the writing I loved and pursued an English major. However, in every part-time job I took and organization I joined, I would somehow end up behind a computer, working on their website. It eventually became clear that my true creative passion was in the coding itself.</p>
+                <p>I blogged and built out my website religiously, gaining a fan base at an early age. But I didn't quite understand if it was the writing I loved, or if the actual fun came from buliding the platform that allowed me to write. At the time, with so few female developers, identifying as a programmer or majoring in computer science felt unrealistic and out of reach. I assumed it was the writing I loved and pursued an English major. However, in every part-time job I took and organization I joined, I would somehow end up behind a computer, working on their website. It eventually became clear that my true creative passion was in the coding itself.</p>
                 
                 <p>I landed my first job as a programmer in 2008 at a digital consultancy in Palo Alto.
                    Since then, I've tackled a diverse array of projects and explored different team and company sizes. However, no matter the environment, once I start coding, my goals are always the same: make sure it looks good, works on every major browser, and write code in such a way so that my future self won't hate me (i.e. organized, self-evident, and scalable).
@@ -82,12 +80,12 @@ function App() {
                   <p>I am excited for the future of technology and optimistic about the fresh ideas of the generations to come.</p>
                 
 
-                  <h3>Website Details</h3>
-                  <p>This site was proudly developed in a few days with React and SCSS. The designed is based on my aura portrait. </p>
 
               </div>
             )}
              */}
+                  {/* <h3>Website Details</h3>
+                  <p>This site was developed with React and SCSS. The designed is based on my aura portrait. </p> */}
 
                 <div className="flex-start mt-40 ml-0">
                   <button className="btn ml-0" onClick={(e) => {handleNavClick('portfolio')}} >Portfolio</button>

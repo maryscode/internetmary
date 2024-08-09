@@ -7,19 +7,16 @@ import TagManager from 'react-gtm-module';
 
 // GTM 
 const tagManagerArgs = {
-    gtmId: 'GTM-KFKTPFQL',
-    dataLayer: {
-  }
+    gtmId: 'GTM-KFKTPFQL'
 }
 TagManager.initialize(tagManagerArgs)
-const app = document.getElementById('app')
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
-), app;
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

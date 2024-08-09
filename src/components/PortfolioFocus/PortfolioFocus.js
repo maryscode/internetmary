@@ -1,8 +1,8 @@
 // import React, { useState } from 'react';
 import styles from './PortfolioFocus.module.scss';
 
-import monitorImg from '../../images/cleanbraille.png';
-import phoneImg from '../../images/cleanbraille-mobile.png';
+// import monitorImg from '../../images/cleanbraille.png';
+// import phoneImg from '../../images/cleanbraille-mobile.png';
 
 export default function PortfolioFocus({projectData}) {
 
@@ -17,7 +17,7 @@ export default function PortfolioFocus({projectData}) {
             <div className={` ${projectData.ipad ? styles.featureImgTablet : styles.featureImgDesktop}`}>
                 <div className={styles.monitor}>
                   <div className={styles.loader}></div>
-                  <img src={projectData.thumbSrc} />
+                  <img src={projectData.thumbSrc} alt={`${projectData.name} thumbnail`} />
                 </div>
               </div>
               {!projectData.ipad && (
