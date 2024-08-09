@@ -30,7 +30,7 @@
         justify-content: center;
         position: relative;
         margin: 0;
-        padding: 20px;
+        padding: 60px 20px 20px;
         @media screen and (min-width: 1024px){
             padding-bottom: 170px;
             flex-direction: row;
@@ -100,6 +100,7 @@
         z-index: 3;
         margin-bottom: 120px; 
         box-sizing: content-box;  
+   
         .monitor {
             position: relative;
             z-index: 3;
@@ -111,6 +112,19 @@
             overflow: hidden;
             line-height: 0;
             font-size: 0;
+            @media screen and (min-width: 550px){
+                height: 249px;
+                width: 450px;                
+            }            
+            @media screen and (min-width: 768px){
+                width: 400px;
+                height: 220px;
+            }            
+            @media screen and (min-width: 1200px){
+                width: 660px;
+                height: 365px;
+                margin-bottom: 0;
+            }             
         }
       
         img {

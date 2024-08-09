@@ -1,11 +1,14 @@
 import styles from './PortfolioItem.module.scss';
 export default function PortfolioItem({projectData,onProjectClick}){
+    const scrollToTop = () => window.scrollTo(0, 210);
+
     const handleOnClick = () => {
         onProjectClick(null);
         setTimeout(() => {onProjectClick(projectData)}, 0);
+        scrollToTop();
         // window.scrollTo({ top: 200});
-        const focus = document.getElementById("activePortfolio");
-        focus.scrollIntoView({behavior: "smooth" });
+        // const focus = document.getElementById("activePortfolio");
+        // focus.scrollIntoView({behavior: "smooth" });
     }    
     return(
         <div onClick={handleOnClick} className={`${styles.portfolioItem} animateFadeInDelay`}>
