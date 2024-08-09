@@ -5,9 +5,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import TagManager from 'react-gtm-module';
 
-// GTM
+// GTM 
 const tagManagerArgs = {
-    gtmId: 'GTM-KFKTPFQL'
+    gtmId: 'GTM-KFKTPFQL',
+    dataLayer: {
+  }
 }
 TagManager.initialize(tagManagerArgs)
 const app = document.getElementById('app')
