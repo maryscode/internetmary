@@ -28,6 +28,8 @@ When changes are committed to the Master branch, `.github/workflows/publish.yml`
 
 Hostinger is set up to auto deploy the contents of /build directory to the root (i.e. /public_html) directory.
 
+NOTE: Currently, only one deploy key is set up with Hostinger. To set up multiple, refer to [Using Multiple Repos on one server](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys#using-multiple-repositories-on-one-server)
+
 Set up is based on the following resources:
 [Publish Sub-directory Action](https://github.com/s0/git-publish-subdir-action)
 
