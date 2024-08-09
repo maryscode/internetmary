@@ -6,8 +6,8 @@ import Footer from  './components/Footer/Footer.js';
 import Portfolio from  './components/Portfolio/Portfolio.js';
 import chevron from  './images/chevron.svg';
 
-
 function App() {
+
   const [currentScreen, setCurrentScreen] = useState('home');
   const [initialLoad, setInitialLoad] = useState(true);
   const [showMore, setShowMore] = useState(false);
@@ -56,7 +56,7 @@ function App() {
 
                 {/* <p>With a background in digital advertising, I've worked on everything from large-scale digital marketing campaigns with a corporate team to independently designing and developing websites from the ground up. No matter the environment, once I start coding, my goals are always the same: make sure it looks good, works on every major browser, and write code in such a way so that my future self won't hate me (i.e. organized, self-evident, and scalable).</p> */}
 
-                <p>Over a decade in the industry has honed my ability to quickly learn and adapt to new technologies. Above all, I believe in having a strong foundation in the fundamentals of HTML5, CSS, and JavaScript&mdash;I see everything else is a flavor of libraries and tools for different use cases.</p>
+                <p>Over a decade in the industry has honed my ability to quickly learn and adapt to new technologies. Above all, I believe in having a strong foundation in the fundamentals of HTML5, CSS, and JavaScript&mdash;I see everything else as a flavor of libraries and tools for different use cases.</p>
 
                 <p>Today, I'm seeking to focus my front-end skills on collaborating with forward-thinking designers and meticulous engineers to build a world-class product that will positively impact culture. </p>
 
