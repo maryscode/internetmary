@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# InternetMary.com Readme
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -34,5 +34,4 @@ Set up is based on the following resources:
 [Publish Sub-directory Action](https://github.com/s0/git-publish-subdir-action)
 
 [Create Deployment Pipeline for React App on Hostinger](https://dev.to/mwoodson11/create-deployment-pipeline-for-react-app-on-hostinger-5bc9)
-
 
