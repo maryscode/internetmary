@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Menu.module.scss';
-import resume from '../../downloads/MaryChan_FrontEnd_Resume.pdf';
+// import resume from '../../downloads/MaryChan_FrontEnd_Resume.pdf';
 
 export default function Menu({menuClass, currentScreen, onMenuClick, setIsOpen, setInitialLoad}){
     const saveMsg = 'Click to copy email address';
@@ -43,7 +43,7 @@ export default function Menu({menuClass, currentScreen, onMenuClick, setIsOpen, 
             <li className={currentScreen === 'home' ? styles.active : ''}><button onClick={(e) => {handleOnClick('home')}}>Home</button></li>
             <li className={currentScreen === 'about' ? styles.active : ''}><button onClick={(e) => {handleOnClick('about')}}>About</button></li>
             <li className={currentScreen === 'portfolio' ? styles.active : ''}><button onClick={(e) => {handleOnClick('portfolio')}}>Portfolio</button></li>
-            <li className={currentScreen === 'resume' ? styles.active : ''}><a href={resume} target='_blank' rel="noreferrer">Resume</a></li>
+            <li className={currentScreen === 'resume' ? styles.active : ''}><a href={process.env.PUBLIC_URL + 'MaryChan_FrontEnd_Resume.pdf'} target='_blank' rel="noreferrer">Resume</a></li>
             <li>
                 <a href="mailto:&#109;&#97;&#114;&#121;&#115;&#99;&#104;&#97;&#110;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;" onClick={handleEmail}>
                     Contact Mary
