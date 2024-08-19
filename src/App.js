@@ -52,7 +52,7 @@ function App() {
 
               <p>Today, I'm seeking to focus my front-end skills on collaborating with forward-thinking designers and meticulous engineers to build a world-class product that will positively impact culture.</p>
 
-              <p>When I'm not coding, I can be found <a href="https://stringsmagazine.com/a-bow-of-humility-setting-aside-my-pride-helped-embrace-my-childlike-enthusiasm-for-music/" target='_blank' rel="noreferrer">playing the violin</a> with my chamber ensemble, going on a run,  deep-diving into a curiosity on YouTube and Wiki, or eating a pizza.</p>
+              <p>When I'm not coding, I can be found <a href="https://stringsmagazine.com/a-bow-of-humility-setting-aside-my-pride-helped-embrace-my-childlike-enthusiasm-for-music/" target='_blank' rel="noreferrer">playing the violin</a> with my chamber ensemble, going on a run, meditating, or deep-diving into a curiosity on YouTube and Wiki.</p>
 
               {/* <p className='flex-end'><button className={`toggleLink ${showMore ? 'less' : 'more'}`} onClick={handleClickMore}>
                 {showMore ? 'Less on my background' : 'More on my background'} <img src={chevron} />
@@ -78,8 +78,8 @@ function App() {
               </div>
             )}
              */}
-              {/* <h3>Website Details</h3>
-                  <p>This site was developed with React and SCSS. The designed is based on my aura portrait. </p> */}
+              <h3>Website Details</h3>
+              <p>This site was developed with React and SCSS. The designed is based on my aura portrait. </p>
 
               <div className="flex-start mt-40 ml-0">
                 <button className="btn ml-0" onClick={(e) => { handleNavClick('portfolio') }} >Portfolio</button>

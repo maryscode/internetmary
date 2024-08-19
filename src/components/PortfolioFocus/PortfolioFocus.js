@@ -34,7 +34,7 @@ export default function PortfolioFocus({projectData}) {
                   {/* <li><strong>Goals and Objectives:</strong> </li> */}
                   <li><strong>Key Features:</strong>  {projectData.features}</li>
                   <li><strong>Challenges:</strong> {projectData.challenges}</li>
-                  <li><strong>What was fun about this project: </strong> {projectData.fun}</li>
+                  <li><strong>What Made This Fun: </strong> {projectData.fun}</li>
                 </ul>
                 <p className="flex-center"><a href={projectData.url} target='_blank' className="btn" rel="noreferrer">Launch Site</a></p> 
               </div>
