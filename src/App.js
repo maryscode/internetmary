@@ -79,7 +79,7 @@ function App() {
             )}
              */}
               <h3>Website Details</h3>
-              <p>This site was developed with React and SCSS. The designed is based on my aura portrait. </p>
+              <p>This site was developed with React and SCSS. The design was inspired by my aura portrait. </p>
 
               <div className="flex-start mt-40 ml-0">
                 <button className="btn ml-0" onClick={(e) => { handleNavClick('portfolio') }} >Portfolio</button>

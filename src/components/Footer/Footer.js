@@ -37,7 +37,7 @@ export default function Footer({currentScreen, onMenuClick}) {
         
          <div id={styles.footer}>
             <ul className={`${styles.menu} ${styles.footerMenu}`}>
-                <li className={currentScreen === 'resume' ? styles.active : ''}><a href={process.env.PUBLIC_URL + 'MaryChan_FrontEnd_Resume.pdf'} target='_blank' rel="noreferrer">Resume</a></li>
+                <li className={currentScreen === 'resume' ? styles.active : ''}><a href={process.env.PUBLIC_URL + 'MaryChan_Resume_Public.pdf'} target='_blank' rel="noreferrer">Resume</a></li>
                 <li>
                 <a href="mailto:&#109;&#97;&#114;&#121;&#115;&#99;&#104;&#97;&#110;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;" onClick={handleEmail}>
                     Contact Mary
@@ -45,7 +45,7 @@ export default function Footer({currentScreen, onMenuClick}) {
                 <span className={`${showToolTip ? styles.show : ''}`}>{toolTipMsg}</span>
             </li>
         </ul> 
-            <p>&copy; 2024 DevRemedy</p>
+            <p>&copy; 2025 DevRemedy</p>
         </div>
     )
 

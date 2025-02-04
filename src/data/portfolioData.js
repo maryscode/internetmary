@@ -37,7 +37,7 @@ export const portfolioData = [
         "summary":"A timed quiz built with React for iPad to be used at a convention. ",
         "tech":"React, SCSS, animations",
         "features":"Multiple choice, true/false answers, a timer and modal that stops the quiz, a form, and a summary of all responses with the correct answers highlighted.",
-        "challenges":"´  This project was my first foray into React, and it required coordinating multiple complex components under tight deadlines. I had to quickly learn React in just two weeks to meet the demands of the project.",
+        "challenges":"This project was my first foray into React, and it required coordinating multiple complex components under tight deadlines. I had to quickly learn React in just two weeks to meet the demands of the project.",
         "fun":"This project was especially exciting because it was my first opportunity to truly dive into React and explore its capabilities. I had been eagerly anticipating working with React, and it didn’t disappoint—it was a lot of fun to see firsthand how powerful and versatile the framework is.",
         "thumbSrc": require("../images/quiz-tablet.png"),
         "ipad": true,
