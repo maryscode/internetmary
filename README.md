@@ -1,25 +1,37 @@
-# InternetMary.com Readme
+# Personal Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This is the source code for my personal portfolio website, showcasing selected web projects, design work, and creative coding experiments.
 
 
-### `npm test`
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠 Built With
 
+- **React**
+- **JavaScript**
+- **CSS Modules**
+- **Custom Components & Animations**
 
+## Folder Structure
 
+```
+src/
+├── components/       # Reusable UI components
+├── data/             # Project data and metadata
+├── images/           # Project screenshots and assets
+├── styles/           # Global styles and CSS modules
+├── App.js            # Main app logic
+├── index.js          # Entry point
+```
 
-## Deployment
-### `npm run build`
-Builds the app for production to the `build` folder.\
+## Development
 
-Place contents in build folder on Hostinger server
+To run locally:
+
+```bash
+npm install
+npm start
+```
+
+## Production
+This site is hosted on Bluehost.
+
+[Visit the Portfolio →](https://internetmary.com)
