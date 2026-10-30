@@ -35,7 +35,7 @@ export default function Nav({ currentScreen, onMenuClick, setInitialLoad }) {
     },[isOpen])    
     return (
 
-        <div id={styles.nav} className={currentScreen === 'home' ? styles.placeholder : styles.interior}>
+        <nav id={styles.nav} className={currentScreen === 'home' ? styles.placeholder : styles.interior}>
             <div id={styles.logo} onClick={(e) => { handleOnClick('home') }}>
                 <span></span>
                 <span></span>
@@ -54,7 +54,7 @@ export default function Nav({ currentScreen, onMenuClick, setInitialLoad }) {
             <div className={`${styles.navMenu} ${isOpen ? styles.showMenu : ''}`}  ref={menuRef}>
                 <Menu setInitialLoad={setInitialLoad} currentScreen={currentScreen} onMenuClick={onMenuClick} setIsOpen={setIsOpen} />
             </div>
-        </div>
+        </nav>
     )
 
 }
