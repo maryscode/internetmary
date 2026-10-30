@@ -16,15 +16,15 @@ export default function Background({currentScreen}) {
         y: event.clientY
       });
       // console.log('mousemove')
-      if (event.clientY < event.view.innerHeight/2 && event.clientX < event.view.innerWidth/2 ) {
+      if (event.clientY < window.innerHeight/2 && event.clientX < window.innerWidth/2 ) {
         // top left
         setDynamicBg(bg1);
         setCursorClass('topLeft');        
-      } else if (event.clientY < event.view.innerHeight/2 && event.clientX >= event.view.innerWidth/2){ 
+      } else if (event.clientY < window.innerHeight/2 && event.clientX >= window.innerWidth/2){ 
         // top right 
         setCursorClass('topRight');
         setDynamicBg(bg2);
-      } else if (event.clientY >= event.view.innerHeight/2 && event.clientX < event.view.innerWidth/2 ){
+      } else if (event.clientY >= window.innerHeight/2 && event.clientX < window.innerWidth/2 ){
         // bottom left
         setDynamicBg(bg3);
         setCursorClass('bottomLeft');
