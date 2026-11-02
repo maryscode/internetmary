@@ -5,17 +5,17 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import TagManager from 'react-gtm-module';
 
-// GTM 
+// GTM
 const tagManagerArgs = {
-    gtmId: 'GTM-KFKTPFQL'
-}
-TagManager.initialize(tagManagerArgs)
+  gtmId: 'GTM-KFKTPFQL',
+};
+TagManager.initialize(tagManagerArgs);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function

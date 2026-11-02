@@ -1,97 +1,102 @@
-
 #orb1 {
-    background: radial-gradient(rgb(252, 61, 169, .7), rgba(255,255,255, 0) 70%);
-    position: fixed;
-    width: 150vw;
-    height: 150vw;
-    left: -80vw;
-    top: -90vw;
-    animation: 5s orb1 linear infinite;
+  background: radial-gradient(
+    rgb(252, 61, 169, 0.7),
+    rgba(255, 255, 255, 0) 70%
+  );
+  position: fixed;
+  width: 150vw;
+  height: 150vw;
+  left: -80vw;
+  top: -90vw;
+  animation: 5s orb1 linear infinite;
 }
 @keyframes orb1 {
-    0% {
-        transform: scale(.7) translate(0,0);
-    }
-    
-    20% {
-        transform: scale(1) translate(5%, 5%);
-    } 
-    40% {
-        transform: scale(1) translate(10%, 10%);
-    } 
-    60% {
-        transform: scale(1) translate(0, 0);
-    }     
-    80% {
-        transform:  scale(.8) translate(0, 0);
-    }          
-    100% {
-        transform: scale(.7) translate(0,0);        
-    }            
-}
+  0% {
+    transform: scale(0.7) translate(0, 0);
+  }
 
+  20% {
+    transform: scale(1) translate(5%, 5%);
+  }
+  40% {
+    transform: scale(1) translate(10%, 10%);
+  }
+  60% {
+    transform: scale(1) translate(0, 0);
+  }
+  80% {
+    transform: scale(0.8) translate(0, 0);
+  }
+  100% {
+    transform: scale(0.7) translate(0, 0);
+  }
+}
 
 #orb2 {
-    background: radial-gradient( rgb(53, 24, 115, .2), rgba(255,255,255, 0) 70%);
-    width: 120vw;
-    height: 120vw;
-    position: fixed;
-    top: 0vw;
-    left: 30vw;
-    //animation: 8s orbcurve linear infinite;
+  background: radial-gradient(
+    rgb(53, 24, 115, 0.2),
+    rgba(255, 255, 255, 0) 70%
+  );
+  width: 120vw;
+  height: 120vw;
+  position: fixed;
+  top: 0vw;
+  left: 30vw;
+  //animation: 8s orbcurve linear infinite;
 }
 @keyframes orbcurve {
-    0% {        
-        opacity: 0;
-        transform: translate(0,0);
-    }
-         
-    50% {
-        opacity: 1;
-        transform: translate(0,500px);
-    }      
-          
-    100% {
-        opacity: 0;
-        transform: translate(900px,900px);
-   
-    }        
-}  
+  0% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate(0, 500px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(900px, 900px);
+  }
+}
 
 #orb3 {
-    background: radial-gradient(rgba(255, 247, 0, .4), rgba(255, 255, 255, 0)70%);
-    width: 180vw;
-    height: 180vw;
-    position: fixed;
-    left: -80vw;
-    bottom: -120vw;
-    animation: 3s orbpulse linear infinite;
+  background: radial-gradient(
+    rgba(255, 247, 0, 0.4),
+    rgba(255, 255, 255, 0) 70%
+  );
+  width: 180vw;
+  height: 180vw;
+  position: fixed;
+  left: -80vw;
+  bottom: -120vw;
+  animation: 3s orbpulse linear infinite;
 }
 @keyframes orbpulse {
-    0% {
-        transform: scale(1);
-    }
-    10% {
-
-    }  
-    20% {
-        transform: scale(.8);
-    }
-    30% {
-    }      
-    40% {
-        transform: scale(1);
-    } 
-    50% {
-        transform: scale(1) translate(10%,5%);
-    }
-    60% {
-        transform: scale(1) translate(20%,10%);
-    }
-    70% {
-        transform: scale(1) translate(30%,10%);
-    }
-    100% {
-        transform: scale(1) translate(0,0);
-    }           
-}  
+  0% {
+    transform: scale(1);
+  }
+  10% {
+  }
+  20% {
+    transform: scale(0.8);
+  }
+  30% {
+  }
+  40% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1) translate(10%, 5%);
+  }
+  60% {
+    transform: scale(1) translate(20%, 10%);
+  }
+  70% {
+    transform: scale(1) translate(30%, 10%);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}

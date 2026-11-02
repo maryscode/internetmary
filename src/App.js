@@ -6,22 +6,24 @@ import Footer from './components/Footer/Footer.js';
 import Portfolio from './components/Portfolio/Portfolio.js';
 
 function App() {
-
   const [currentScreen, setCurrentScreen] = useState('home');
   const [initialLoad, setInitialLoad] = useState(true);
   //const [showMore, setShowMore] = useState(false);
 
-
   const handleNavClick = (e) => {
     window.scrollTo({ top: 0 });
     if (e === 'portfolio') {
-      setInitialLoad(false)
+      setInitialLoad(false);
     }
     setCurrentScreen(e);
-  }
+  };
   return (
     <div className={`App ${currentScreen}`}>
-      <Nav currentScreen={currentScreen} onMenuClick={setCurrentScreen} setInitialLoad={setInitialLoad} />
+      <Nav
+        currentScreen={currentScreen}
+        onMenuClick={setCurrentScreen}
+        setInitialLoad={setInitialLoad}
+      />
 
       {currentScreen !== 'portfolio' && (
         <Background bgClass={'home'} currentScreen={currentScreen} />
@@ -29,30 +31,77 @@ function App() {
 
       {currentScreen !== 'portfolio' && (
         <div id="hello" className={initialLoad ? 'initialLoad' : 'loaded'}>
-
-          <h1 onClick={(e) => { handleNavClick('about') }}>
+          <h1
+            onClick={(e) => {
+              handleNavClick('about');
+            }}
+          >
             <span>Mary</span>
             <span>Chan</span>
           </h1>
-          <p className="animate1">Creative and user-focused full-stack developer. 10+ years of experience. </p>
+          <p className="animate1">
+            Creative and user-focused full-stack developer. 10+ years of
+            experience.{' '}
+          </p>
           <div className="animate2 flex-center">
-            <button className="btn" onClick={(e) => { handleNavClick('about') }} >About</button>
-            <button className="btn" onClick={(e) => { handleNavClick('portfolio') }} >Portfolio</button>
+            <button
+              className="btn"
+              onClick={(e) => {
+                handleNavClick('about');
+              }}
+            >
+              About
+            </button>
+            <button
+              className="btn"
+              onClick={(e) => {
+                handleNavClick('portfolio');
+              }}
+            >
+              Portfolio
+            </button>
           </div>
 
           {currentScreen === 'about' && (
             <div className="content animateFadeInDelay">
               <h2>Hello, I'm Mary.</h2>
 
-              <p>I'm a full-stack developer with expertise in the front-end. I love exploring the creative aspect of programming and I am committed to refining the user experience—both for the end-user interacting with the product and for the developers working with the code.</p>
+              <p>
+                I'm a full-stack developer with expertise in the front-end. I
+                love exploring the creative aspect of programming and I am
+                committed to refining the user experience—both for the end-user
+                interacting with the product and for the developers working with
+                the code.
+              </p>
 
               {/* <p>With a background in digital advertising, I've worked on everything from large-scale digital marketing campaigns with a corporate team to independently designing and developing websites from the ground up. No matter the environment, once I start coding, my goals are always the same: make sure it looks good, works on every major browser, and write code in such a way so that my future self won't hate me (i.e. organized, self-evident, and scalable).</p> */}
 
-              <p>Over a decade in the industry has honed my ability to quickly learn and adapt to new technologies. Above all, I believe in having a strong foundation in the fundamentals of HTML5, CSS, and JavaScript&mdash;I see everything else as a flavor of libraries and tools for different use cases.</p>
+              <p>
+                Over a decade in the industry has honed my ability to quickly
+                learn and adapt to new technologies. Above all, I believe in
+                having a strong foundation in the fundamentals of HTML5, CSS,
+                and JavaScript&mdash;I see everything else as a flavor of
+                libraries and tools for different use cases.
+              </p>
 
-              <p>Today, I'm seeking to focus my front-end skills on collaborating with forward-thinking designers and meticulous engineers to build a world-class product that will positively impact culture.</p>
+              <p>
+                Today, I'm seeking to focus my front-end skills on collaborating
+                with forward-thinking designers and meticulous engineers to
+                build a world-class product that will positively impact culture.
+              </p>
 
-              <p>When I'm not coding, I can be found <a href="https://stringsmagazine.com/a-bow-of-humility-setting-aside-my-pride-helped-embrace-my-childlike-enthusiasm-for-music/" target='_blank' rel="noreferrer">playing the violin</a> with my chamber ensemble, going on a run, meditating, or deep-diving into a curiosity on YouTube and Wiki.</p>
+              <p>
+                When I'm not coding, I can be found{' '}
+                <a
+                  href="https://stringsmagazine.com/a-bow-of-humility-setting-aside-my-pride-helped-embrace-my-childlike-enthusiasm-for-music/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  playing the violin
+                </a>{' '}
+                with my chamber ensemble, going on a run, meditating, or
+                deep-diving into a curiosity on YouTube and Wiki.
+              </p>
 
               {/* <p className='flex-end'><button className={`toggleLink ${showMore ? 'less' : 'more'}`} onClick={handleClickMore}>
                 {showMore ? 'Less on my background' : 'More on my background'} <img src={chevron} />
@@ -79,21 +128,35 @@ function App() {
             )}
              */}
               <h3>Website Details</h3>
-              <p>This site was developed with React and SCSS. The design was inspired by my aura portrait. </p>
+              <p>
+                This site was developed with React and SCSS. The design was
+                inspired by my aura portrait.{' '}
+              </p>
 
               <div className="flex-start mt-40 ml-0">
-                <button className="btn ml-0" onClick={(e) => { handleNavClick('portfolio') }} >Portfolio</button>
-                <a className="btn" target="_blank" href="https://www.linkedin.com/in/chanmary" rel="noreferrer">LinkedIn</a>
+                <button
+                  className="btn ml-0"
+                  onClick={(e) => {
+                    handleNavClick('portfolio');
+                  }}
+                >
+                  Portfolio
+                </button>
+                <a
+                  className="btn"
+                  target="_blank"
+                  href="https://www.linkedin.com/in/chanmary"
+                  rel="noreferrer"
+                >
+                  LinkedIn
+                </a>
               </div>
-
             </div>
           )}
         </div>
       )}
 
-      {currentScreen === 'portfolio' && (
-        <Portfolio />
-      )}
+      {currentScreen === 'portfolio' && <Portfolio />}
 
       {currentScreen === 'portfolio' && (
         <Footer currentScreen={currentScreen} onMenuClick={setCurrentScreen} />
