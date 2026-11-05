@@ -1,114 +1,116 @@
 .portfolioItem {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    text-align: left;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  text-align: left;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+  color: #4d4d4d;
+  transition: all 0.2s;
+  cursor: pointer;
+
+  * {
+    transition: all 0.2s;
+  }
+  @media screen and (min-width: 1024px) {
+    // margin: 40px;
+  }
+
+  h4 {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: bold;
+    margin: 10px 4px 0 4px;
+  }
+  h5 {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: normal;
+    margin: 5px 0 10px;
+  }
+  p {
+    margin: 0 4px 10px 4px;
     font-size: 14px;
     line-height: 20px;
-    text-decoration: none;
-    color: #4d4d4d;
-    transition: all .2s;
-    cursor: pointer;
-
-    
-    * {
-        transition: all .2s;
-    }
-    @media screen and (min-width: 1024px){
-        // margin: 40px;
-    }
-
-    h4 {
-        font-size: 22px;
-        line-height: 26px;
-        font-weight: bold;
-        margin: 10px 4px 0 4px;
-        
-    }
-    h5 {
-        font-size: 16px;
-        line-height: 18px;
-        font-weight: normal;
-        margin: 5px 0 10px;
-    }
-    p {
-        margin: 0 4px 10px 4px;
-        font-size: 14px;
-        line-height: 20px;
-    }
+  }
+  .link {
+    font-weight: bold;
+  }
+  &:hover {
+    h4,
     .link {
-        font-weight: bold;
-    }
-    &:hover {
-        h4, .link {
-            color: #5ee7df;
-        }
-    }
-    
-}
-.thumbnail {
-    position: relative;
-    width: 100%;
-    height: 200px;
-    background: #eee;
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: 4px solid #eee;
-    @media screen and (min-width: 450px) {
-        background-size: 100% auto;
-    }
-
-    .cta {
-        opacity: 0;
-        display: flex;
-        align-items: flex-end;
-        position: absolute;
-        bottom: 0;
-        left: 0; 
-        width: 100%;
-        height: 100%;
-        // background: rgb(0,0,0);
-        // background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(255,255,255,0) 100%); 
-            background: transparent linear-gradient(90deg, rgba(94, 231, 223, .8) 0%, rgba(180, 144, 202,.8) 100%);
-
-        overflow: hidden;
-        //transition: all .2s;
-    }
-    span {
-        transform: translateY(10px);
-        color: #fff;
-        padding: 15px 20px;
-        font-weight: bold;
-        transition: .6s all;
-        font-size: 18px;
-
-    }
-}
-.thumbnail:hover {
-    border-color: #fff
-}
-.thumbnail:hover .cta {
-    opacity: 1;
-    span {
-        transform: translateY(0);
-    }
-}
-@keyframes fadeIn {
-	0% {       
-        transform: translateY(20px); 
-		opacity:0;
-	}
-	100% {        
-        transform: translateY(0);
-		opacity: 1;
-	}		
-}	
-
-@for $i from 1 through 10 {
-    .portfolioItem:nth-child(#{$i}) {
-      opacity:0;  
-      animation:fadeIn .8s ease .75s 1 forwards;
-      animation-delay: .3s * $i;
+      color: #5ee7df;
     }
   }
+}
+.thumbnail {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background: #eee;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 4px solid #eee;
+  @media screen and (min-width: 450px) {
+    background-size: 100% auto;
+  }
+
+  .cta {
+    opacity: 0;
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background: rgb(0,0,0);
+    // background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(255,255,255,0) 100%);
+    background: transparent
+      linear-gradient(
+        90deg,
+        rgba(94, 231, 223, 0.8) 0%,
+        rgba(180, 144, 202, 0.8) 100%
+      );
+
+    overflow: hidden;
+    //transition: all .2s;
+  }
+  span {
+    transform: translateY(10px);
+    color: #fff;
+    padding: 15px 20px;
+    font-weight: bold;
+    transition: 0.6s all;
+    font-size: 18px;
+  }
+}
+.thumbnail:hover {
+  border-color: #fff;
+}
+.thumbnail:hover .cta {
+  opacity: 1;
+  span {
+    transform: translateY(0);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@for $i from 1 through 10 {
+  .portfolioItem:nth-child(#{$i}) {
+    opacity: 0;
+    animation: fadeIn 0.8s ease 0.75s 1 forwards;
+    animation-delay: 0.3s * $i;
+  }
+}
